@@ -44,13 +44,12 @@ def combine_text(object_array):
 
 def main(args):
     """ Main entry point of the app """
-    # print(args.file.read())
     data = args.file.read()
-    out = convert(data)
+    resulting_html = convert(data)
+    
     output_filename = str(args.file.name[:-3]) + '_new.html'
-
     f = open(output_filename, "w")
-    f.write(out)
+    f.write(resulting_html)
     f.close()
 
 
